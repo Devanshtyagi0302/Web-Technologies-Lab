@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+.board{
+    position: absolute;
+    top:20%;
+    left:37%;
+    border: solid 30px darkgreen;
+    height:500px;
+    width:500px;
+    translate:(-50%,-50%);
+    border-radius: 2%;
+}       
+.innerbox{
+    position: relative;
+    top: -25%;
+    left: 10%;
+    border: solid 10px brown;
+    height:350px;
+    width:350px;
+    translate:(-50%,-50%);
+    border-radius: 10%;
+
+}
+
+.hole1{
+    height:40px;
+    width: 40px;
+    position:relative;
+    border-radius: 50%;
+    background-color: black;
+    margin:0px;
+    padding:0px;
+}
+.hole2{
+    height:40px;
+    width: 40px;
+    position:relative;
+    left:91%;
+    top:-9%;
+    border-radius: 50%;
+    background-color: black;
+    margin:0px;
+    padding:0px;
+}
+.hole3{
+    height:40px;
+    width: 40px;
+    position:relative;
+    top:73%;
+    border-radius: 50%;
+    background-color: black;
+    margin:0px;
+    padding:0px;
+}
+.hole4{
+    height:40px;
+    width: 40px;
+    position:relative;
+    top:64%;
+    left:91%;
+    border-radius: 50%;
+    background-color: black;
+    margin:0px;
+    padding:0px;
+}
+
+.innercircle{
+    height:90px;
+    width:90px;
+    border-radius: 50%;
+    position:relative;
+    top:37%;
+    left:37%;
+    border:solid 5px black;
+}
+
+.rani{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    position:relative;
+    top:32%;
+    left:32%;
+    background-color: red;
+    animation: hit1 3s linear ;
+    animation-delay: 2.2s;
+    animation-fill-mode: forwards;
+}
+.striker{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    position:relative;
+    top:70%;
+    left:20%;
+    background-color: blue;
+    animation: hit 3s linear ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hit{
+    0%{transform: translateX(0px) translateY(0px)}
+    75%{transform: translateX(60px) translateY(-150px)}
+    100%{transform: translateX(30px) translateY(-220px)}
+}
+
+@keyframes hit1{
+    0%{transform: translateX(0px) translateY(0px)}
+    100%{transform: translateX(200px) translateY(-210px)}
+}
