@@ -1,0 +1,184 @@
+body{
+    background-color: antiquewhite;
+}
+.circle1{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    left:25%;
+    border-radius: 50%;
+    background-color: yellow;
+    animation: rotate1 20s infinite ;
+}
+.petal1{
+    position: relative;
+    top:12px;
+    left:-45px;
+    width:50px;
+    height:20px;
+    border-radius: 50%;
+    background-color: red;
+}
+.petal2{
+    position: relative;
+    top:26px;
+    left:15px;
+    width:20px;
+    height:50px;
+    border-radius: 50%;
+    background-color: red;
+}
+.petal3{
+    position: relative;
+    top:-55px;
+    left:46px;
+    width:50px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+.petal4{
+    position: relative;
+    top:-135px;
+    left:14px;
+    width:20px;
+    height:50px;
+    border-radius: 50%;
+    background-color: red;
+}
+.candle{
+    position:absolute;
+    height:20px;
+    width:5px;
+    top:52%;
+    left:27.75%;
+    background-color: antiquewhite;
+}
+.flame{
+    position: relative;
+    height: 10px;
+    width: 4px;
+    top:-5px;
+    left:1px;
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+}
+@keyframes rotate1 {
+     0%{
+        transform: rotate(0deg);
+    } 
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.rod{
+    position: absolute;
+    height:200px;
+    width:50px;
+    background-color: yellow;
+    top:45%;
+    left:70%;
+    
+}
+.sepal1{
+    position: relative;
+    background-color: red;
+    height: 80px;
+    width: 20px;
+    top:-80px;
+    left:5px;
+    rotate: -20deg;
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+    animation: rotate2 3s infinite reverse;
+}
+.sepal2{
+    position: relative;
+    background-color: red;
+    height: 80px;
+    width: 20px;
+    top:-160px;
+    left:15px;
+   border-radius: 50%;
+   transform-origin: 50% 100%;
+    animation: rotate3 3s infinite reverse;
+}
+.sepal3{
+    position: relative;
+    background-color: red;
+    height: 80px;
+    width: 20px;
+    top:-240px;
+    left:25px;
+    rotate: 20deg;
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+    animation: rotate4 3s infinite reverse;
+}
+.sepal4{
+    position: relative;
+    background-color: red;
+    height: 83px;
+    width: 20px;
+    top:-320px;
+    left:35px;
+    rotate: 40deg;
+   border-radius: 50%;
+   transform-origin: 50% 100%;
+    animation: rotate5 3s infinite reverse;
+}
+.sepal5{
+    position: relative;
+    background-color: red;
+    height: 80px;
+    width: 20px;
+    top:-400px;
+    left:-5px;
+    rotate: -40deg;
+    border-radius: 50%;
+    transform-origin: 50% 100%;
+    animation: rotate6 3s infinite reverse ;
+}
+.base{
+    position: absolute;
+    width: 150px;
+    height:60px;
+    background-color: greenyellow;
+    left: 63%;
+    top:70%;
+    border-radius: 20%;
+
+}
+@keyframes rotate2{
+        0%{
+            transform:  rotateZ(-70deg) ;
+        }
+
+}
+@keyframes rotate3{
+    0%{
+        transform: rotateX(70deg) ;
+    }
+
+}
+
+@keyframes rotate4{
+    0%{
+        transform: rotateZ(70deg) ;
+    }
+
+}
+@keyframes rotate5{
+    0%{
+        transform: rotateZ(70deg) ;
+    }
+
+}
+@keyframes rotate6{
+    0%{
+        transform: rotateZ(-70deg) ;
+    }
+
+}
