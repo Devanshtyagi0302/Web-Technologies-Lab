@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boxes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Interactive Boxes</h1>
+
+    <div class="container">
+        <div class="box" onclick="alert('This is an alert box!')">Alert Box</div>
+        <div class="box red-box" onclick="prompt('Please enter your name:', 'John Doe')">Prompt Box</div>
+        <div class="box green-box" onclick="confirm('Are you sure you want to proceed?')">Confirm Box</div>
+        <div class="box blue-box" onclick="openModal()">Custom Modal</div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>This is a custom modal box!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image-box" onclick="openImage('a.jpg')">
+            <img src="./a.jpg" alt="Image 1">
+        </div>
+        <div class="image-box" onclick="openImage('b.jpg')">
+            <img src="./b.jpg" alt="Image 2">
+        </div>
+    </div>
+
+    <div class="tooltip">
+        Hover over me
+        <span class="tooltip-text">This is a tooltip</span>
+    </div>
+
+    <div class="resizable-box" contenteditable="true">Resizable Box</div>
+
+    <div class="drag-box" draggable="true">
+        Drag Me
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
