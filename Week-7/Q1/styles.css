@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    padding: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 24px;
+    color: #fff; /* Add this line to ensure text is visible on the background */
+}
+
+.additional-info {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.additional-info h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 0;
+}
