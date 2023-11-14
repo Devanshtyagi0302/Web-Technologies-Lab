@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>User Registration</h2>
+
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" pattern="^[A-Za-z]+$" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|mil)$" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" pattern="^[0|6|9][0-9]{9}$" required>
+
+        <label for="class">Class:</label>
+        <select id="class" required>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+            <option value="platinum">Platinum</option>
+        </select>
+
+        <button type="button" onclick="saveUser()">Save</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function saveUser() {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var userClass = $('#class').val();
+
+            // Make an asynchronous request to check if the user already exists
+            $.ajax({
+                url: 'check_user.php',
+                method: 'POST',
+                data: { name: name },
+                success: function(response) {
+                    if (response !== '') {
+                        // User already exists, display details
+                        $('#result').html(response);
+                    } else {
+                        // User doesn't exist, proceed to save
+                        saveUserDetails(name, email, phone, userClass);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+        function saveUserDetails(name, email, phone, userClass) {
+            // Make an asynchronous request to save user details
+            $.ajax({
+                url: 'save_user.php',
+                method: 'POST',
+                data: {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    class: userClass
+                },
+                success: function(response) {
+                    // Display success message or handle as needed
+                    $('#result').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
